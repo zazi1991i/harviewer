@@ -1,0 +1,27 @@
+#labels Featured,Phase-Deploy
+How to install HAR Viewer application on your machine.
+
+== Introduction ==
+
+HAR Viewer is an open source tool that helps to preview existing HAR (HTTP Archive) files. These files contains recorded information about HTTP traffic performed by web pages. See list of tools supporting HAR [http://groups.google.com/group/http-archive-specification/web/har-adopters?hl=en here].
+
+
+== Installation ==
+
+Following steps describe how to install HAR Viewer on your local machine.
+
+  * Checkout HAR Viewer source code from SVN (read only copy)
+  {{{svn checkout http://harviewer.googlecode.com/svn/trunk/ harviewer}}}
+
+  * Build distribution by running [http://ant.apache.org/ ant] in the root directory
+  {{{ant}}}
+
+  * New *Release* directory is created. Copy content of this directory on to your web server.
+
+== Pages ==
+The main HAR Viewer page is represented by {{{index.php}}}. In order to display a simple preview of a HAR file (perhaps as embedded iframe within another page, e.g. blog post), you can utilize {{{pagelist.php}}}
+
+An example:
+{{{http://www.softwareishard.com/har/viewer/pagelist.php?path=examples/google.com.har}}}
+
+Where the {{{path}}} parameter specifies location of the HAR file that should be displayed.
