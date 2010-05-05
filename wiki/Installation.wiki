@@ -3,7 +3,7 @@ Download latest distribution from [http://code.google.com/p/harviewer/downloads/
 
 === Introduction ===
 
-HAR Viewer is an open source tool that helps to preview existing HAR (HTTP Archive) files. These files contains recorded information about HTTP traffic performed by web pages.
+HAR Viewer is a web application (PHP) that allows to visualize HTTP tracing logs based on HTTP Archive format (HAR). These files contain recorded information about HTTP traffic performed by web pages. A HAR log can be created by HTTP sniffer tools such as Firebug.
 
   * See [http://groups.google.com/group/firebug-working-group/web/http-tracing---export-format HAR spec] to understand structure of a HAR file.
   * See [http://groups.google.com/group/http-archive-specification/web/har-adopters?hl=en List of tools] supporting HAR.
