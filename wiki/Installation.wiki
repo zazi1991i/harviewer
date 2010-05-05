@@ -20,9 +20,16 @@ Following steps describe how to install HAR Viewer on your local machine.
 
 === Pages ===
 
-The main HAR Viewer page is represented by {{{index.php}}}. In order to display a simple preview of a HAR file (perhaps as embedded iframe within another page, e.g. blog post), you can utilize {{{pagelist.php}}}
+The viewer provides two pages that can be used to preview a HAR file.
 
-An [http://www.softwareishard.com/har/viewer/pagelist.php?path=examples/google.com.har example]:
+  * {{{index.php}}} The main HAR Viewer page that shows detailed information summary about loaded HAR file(s).
+
+  * {{{pagelist.php}}} Simplified preview of a single HAR file. Can be used as embedded iframe withing another page (e.g. blog post). This page expects one parameter {{{path}}} that specifies location of input HAR file.
+
+Online examples:
+
+[http://www.softwareishard.com/har/viewer/index.php index.php]:
 {{{http://www.softwareishard.com/har/viewer/pagelist.php?path=examples/google.com.har}}}
 
-Where the {{{path}}} parameter specifies location of the HAR file that should be displayed.
+[http://www.softwareishard.com/har/viewer/pagelist.php?path=examples/google.com.har pagelist.php]:
+{{{http://www.softwareishard.com/har/viewer/pagelist.php?path=examples/google.com.har}}}
