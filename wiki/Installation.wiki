@@ -10,9 +10,9 @@ HAR Viewer is an open source tool that helps to preview existing HAR (HTTP Archi
   * Check out [http://www.softwareishard.com/har/viewer/ HAR Viewer] online.
   * Use [http://www.softwareishard.com/blog/netexport/ Firebug/NetExport] to monitor HTTP traffic and save collected info into a HAR file.
 
-=== Setup ===
+=== Build ===
 
-Following steps describe how to build own distribution HAR Viewer on your local machine.
+Following steps describe how to build your own distribution of HAR Viewer.
 
   * Checkout HAR Viewer source code from SVN (read only copy)
   {{{svn checkout http://harviewer.googlecode.com/svn/trunk/ harviewer}}}
