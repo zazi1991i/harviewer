@@ -9,6 +9,7 @@ HAR Viewer is a web application (PHP) that allows to visualize HTTP tracing logs
   * See [http://groups.google.com/group/http-archive-specification/web/har-adopters?hl=en List of tools] supporting HAR.
   * Check out [http://www.softwareishard.com/har/viewer/ HAR Viewer] online.
   * Use [http://www.softwareishard.com/blog/netexport/ Firebug/NetExport] to monitor HTTP traffic and save collected info into a HAR file.
+  * Use HAR [http://groups.google.com/group/http-archive-specification?hl=en newsgroup] to discuss HAR spec.
 
 === Build ===
 
