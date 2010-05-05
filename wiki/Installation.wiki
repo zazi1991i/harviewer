@@ -24,12 +24,13 @@ The viewer provides two pages that can be used to preview a HAR file.
 
   * {{{index.php}}} The main HAR Viewer page that shows detailed information summary about loaded HAR file(s).
 
-  * {{{pagelist.php}}} Simplified preview of a single HAR file. Can be used as embedded iframe withing another page (e.g. blog post). This page expects one parameter {{{path}}} that specifies location of input HAR file.
+  * {{{pagelist.php}}} Simplified preview of a single HAR file. Can be used as embedded iframe withing another page (e.g. blog post). This page expects one parameter {{{path}}} that specifies location of the input HAR file.
 
 Online examples:
 
+
 [http://www.softwareishard.com/har/viewer/index.php index.php]:
-{{{http://www.softwareishard.com/har/viewer/pagelist.php?path=examples/google.com.har}}}
+{{{http://www.softwareishard.com/har/viewer/index.php}}}
 
 [http://www.softwareishard.com/har/viewer/pagelist.php?path=examples/google.com.har pagelist.php]:
 {{{http://www.softwareishard.com/har/viewer/pagelist.php?path=examples/google.com.har}}}
