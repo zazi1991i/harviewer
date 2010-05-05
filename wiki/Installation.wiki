@@ -36,8 +36,8 @@ Online examples:
 [http://www.softwareishard.com/har/viewer/index.php HAR Viewer]:
 {{{http://www.softwareishard.com/har/viewer/index.php}}}
 
-[http://www.softwareishard.com/har/viewer/index.php?path=examples/inline-scripts-block.har Load specified HAR by default]:
-{{{http://www.softwareishard.com/har/viewer/index.php?path=examples/inline-scripts-block.har}}}
+[http://www.softwareishard.com/har/viewer/index.php?path=examples/google.com.har Load specified HAR by default]:
+{{{http://www.softwareishard.com/har/viewer/index.php?path=examples/google.com.har}}}
 
 [http://www.softwareishard.com/har/viewer/pagelist.php?path=examples/google.com.har Simple Preview]:
 {{{http://www.softwareishard.com/har/viewer/pagelist.php?path=examples/google.com.har}}}
