@@ -42,3 +42,12 @@ Online examples:
 
 [http://www.softwareishard.com/har/viewer/pagelist.php?path=examples/google.com.har Simple Preview]:
 {{{http://www.softwareishard.com/har/viewer/pagelist.php?path=examples/google.com.har}}}
+
+
+=== Known Issues ===
+   * On CentOS you need to install the Apache Ant version 1.6.5 and then the optional Ant trax package to successfully build harviewer.
+
+{{{
+$ yum install ant.x86_64
+$ yum install ant-trax.x86_64
+}}}
