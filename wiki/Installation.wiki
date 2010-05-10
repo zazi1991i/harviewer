@@ -23,6 +23,13 @@ Following steps describe how to build your own distribution of HAR Viewer.
 
   * New *Release* directory is created. Copy content of this directory on to your PHP enabled web server.
 
+=== Customize Build ===
+
+As explained in the section above, the build process is based on {{{and}}}. This process utilizes a {{{ant.properties}}} file that can be used to customize following:
+
+  * {{{VERSION}}} Version number of the viewer.
+  * {{{GOOGLE-ANALYTICS-PROFILE}}} ID of google analytics profile. If set, google analytics will apply automatically using provided ID (not set by default). This property is available since HAR Viewer 1.1-9
+
 === Pages ===
 
 The viewer provides two pages that can be used to preview a HAR file.
