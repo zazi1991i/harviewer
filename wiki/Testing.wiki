@@ -1,0 +1,24 @@
+#labels Tests,Selenium
+How to run automated HAR Viewer tests using Selenium.
+
+=== Selenium Requirements ===
+
+  * PHPUnit 3.0 - http://www.phpunit.de
+  * Selenium - http://pear.php.net/
+  * Java 5 (1.5.0) is needed for Selenium RC - http://java.sun.com
+  * Selenium Remote Control (RC) - http://openqa.org/
+
+
+=== Running Selenium Tests ===
+
+  # Set your HAR viewer server base path in _config.php_, e.g.:
+{{{$harviewer_base = "http://legoas/har/viewer/";}}}
+
+HAR Viewer must be installed on your server in {{{/har/viewer/}}} directory, e.g:
+{{{http://<your-domain>/har/viewer/}}}
+
+  # Run Selenium using:
+{{{selenium/start-server.bat}}}
+
+  # Run PHP tests:
+{{{selenium/tests/phpunit allTests.php}}}
