@@ -11,14 +11,21 @@ How to run automated HAR Viewer tests using Selenium.
 
 === Running Selenium Tests ===
 
-  # Set your HAR viewer server base path in _config.php_, e.g.:
+<ol>
+<li>
+Set your HAR viewer server base path in _config.php_, e.g.:
 {{{$harviewer_base = "http://legoas/har/viewer/";}}}
-
+</li>
+<li>
 HAR Viewer must be installed on your server in {{{/har/viewer/}}} directory, e.g:
 {{{http://<your-domain>/har/viewer/}}}
-
-  # Run Selenium using:
+</li>
+<li>
+Run Selenium using:
 {{{selenium/start-server.bat}}}
-
-  # Run PHP tests:
+</li>
+<li>
+Run PHP tests:
 {{{selenium/tests/phpunit allTests.php}}}
+</li>
+</ol>
