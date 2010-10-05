@@ -1,4 +1,4 @@
-#labels dojo,viewer-1.1
+#labels viewer-1.1
 Custom Dojo build for HAR Viewer
 
 === Introduction ===
