@@ -1,5 +1,5 @@
 #labels viewer-1.1,obsolete
-<span style="color:red">This page is relevant only for HAR Viewer 1.1</span>
+_This page is relevant only for HAR Viewer 1.1. HAR Viewer 2.0 is built on top of RequireJS and jQuery._
 
 Custom Dojo build for HAR Viewer
 
