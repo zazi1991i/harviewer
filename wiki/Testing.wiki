@@ -26,6 +26,6 @@ Run Selenium using:
 </li>
 <li>
 Run PHP tests:
-{{{selenium/tests/phpunit allTests.php}}}
+{{{phpunit selenium/tests/allTests.php}}}
 </li>
 </ol>
