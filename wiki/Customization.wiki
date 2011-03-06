@@ -132,3 +132,6 @@ $("#content").bind("onViewerPreInit", function(event)
     preview.showTimeline(true);
 });
 }}}
+
+== Feedback ==
+Do you need more? Please [http://code.google.com/p/harviewer/issues/list create a report].
