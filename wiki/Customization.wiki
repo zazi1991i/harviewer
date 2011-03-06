@@ -40,7 +40,7 @@ It is possible to registers an event listener to the {{{content}}} element and p
 
   * {{{onViewerPreInit}}} Fired before the viewer renders itself into the page.
   * {{{onViewerInit}}} Fired after the viewer is fully initialized and rendered in the page.
-  * {{{onViewerHARAppended}}} Fired after a HAR file has been appended into the viewer.
+  * {{{onViewerHARLoaded}}} Fired after a HAR file has been appended into the viewer.
 
 See following example that shows how to register a listener.
 
