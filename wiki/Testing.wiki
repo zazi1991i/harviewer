@@ -25,7 +25,11 @@ Run Selenium using:
 {{{selenium/start-server.bat}}}
 </li>
 <li>
+Change directory to:
+{{{cd selenium/tests/}}}
+</li>
+<li>
 Run PHP tests:
-{{{phpunit selenium/tests/allTests.php}}}
+{{{phpunit allTests.php}}}
 </li>
 </ol>
