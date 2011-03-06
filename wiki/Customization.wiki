@@ -97,3 +97,37 @@ $("#content").bind("onViewerPreInit", function(event)
     viewer.showTabBar(false);
 });
 }}}
+
+== Remove Toolbar Buttons ==
+Similarly to tabs, you can also remove existing toolbar buttons. Again, see an example that removes _Download_ and _Clear_ buttons from the _Preview_ tab.
+
+
+{{{
+$("#content").bind("onViewerPreInit", function(event)
+{
+    // Get application object
+    var viewer = event.target.repObject;
+
+    // Remove toolbar buttons
+    var preview = viewer.getTab("Preview");
+    preview.toolbar.removeButton("download");
+    preview.toolbar.removeButton("clear");
+});
+}}}
+
+
+== Timeline & Statistics ==
+In order to control visibility of a page _timeline_ and _statistics_ you can use following APIs:
+
+{{{
+$("#content").bind("onViewerPreInit", function(event)
+{
+    // Get application object
+    var viewer = event.target.repObject;
+
+    // Make sure stats and timeline is visible
+    // to the user by default
+    preview.showStats(true);
+    preview.showTimeline(true);
+});
+}}}
