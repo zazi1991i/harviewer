@@ -34,6 +34,7 @@ Here is a simplified version of the file:
   * {{{<div id="content">}}} element contains entire HAR Viewer UI
   * {{{scripts/requireplugins-jquery.js}}} includes RequireJS + JQuery. HAR Viewer is built on top of these libraries.
   * {{{require(["harViewer"]);}}} loads entire HAR Viewer module and all dependent modules.
+  * @VERSION@ is dynamically replaced by the current version number during the [[http://code.google.com/p/harviewer/wiki/Installation build]] process.
 
 
 It is possible to registers an event listener to the {{{content}}} element and perform various customization of the UI at the right moment. There are following events you can handle.
