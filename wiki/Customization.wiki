@@ -6,3 +6,94 @@ There is a few cookies that you can use to customize look and feel of HAR Viewer
   * *timeline* (_boolean_) - Use this cookie to show/hide a timeline section displayed on the Preview tab. Set to true by default.
   * *stats* (_boolean_) - Use this cookie to show/hide a statistics section displayed on the Preview tab. Set to true by default.
   * *phaseInterval* (_number, ms_) - Number of milliseconds (1000 by default) specifying a maximum gap between two requests. If a time lag between two HTTP requests (counted from the end of the first one till the beginning of the second one) exceeds the limit, the graphical timeline breaks layout and requests are drawn again from the beginning (left side) of the waterfall   diagram. See [http://www.softwareishard.com/blog/firebug/firebug-net-panel-timings/ more] about this feature.
+  * *validate* (_boolean_) If set to true, viewer is automatically validating input HAR logs against JSON schema.
+
+
+=== UI Customization ===
+HAR Viewer also provides APIs that can be used for UI customization. For example, you can remove default tabs and/or toolbar buttons that are not necessary for your needs.
+
+The customization can be don within index.php, which represents the application page.
+
+Here is a simplified version of the file:
+
+{{{
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>HTTP Archive Viewer @VERSION@</title>
+</head>
+<body class="harBody">
+    <div id="content" version="@VERSION@"></div>
+    <script src="scripts/requireplugins-jquery.js"></script>
+    <script>require(["harViewer"]);</script>
+    <link rel="stylesheet" href="css/harViewer.css" type="text/css"/>
+</body>
+</html>
+}}}
+
+  * {{{<div id="content">}}} element contains entire HAR Viewer UI
+  * {{{scripts/requireplugins-jquery.js}}} includes RequireJS + JQuery. HAR Viewer is built on top of these libraries.
+  * {{{require(["harViewer"]);}}} loads entire HAR Viewer module and all dependent modules.
+
+
+It is possible to registers an event listener to the {{{content}}} element and perform various customization of the UI at the right moment. There are following events you can handle.
+
+  * {{{onViewerPreInit}}} Fired before the viewer renders itself into the page.
+  * {{{onViewerInit}}} Fired after the viewer is fully initialized and rendered in the page.
+  * {{{onViewerHARAppended}}} Fired after a HAR file has been appended into the viewer.
+
+See following example that shows how to register a listener.
+
+{{{
+<body class="harBody">
+    <div id="content" version="@VERSION@"></div>
+    <script src="scripts/requireplugins-jquery.js"></script>
+    <script>require(["harViewer"]);</script>
+    <script>
+    $("#content").bind("onViewerPreInit", function(event)
+    {
+        // Get application object
+        var viewer = event.target.repObject;
+    });
+</body>
+}}}
+
+
+== Removing Unnecessary Tabs ==
+Some of the application's tabs (such as _Home_, About, etc.) are not always necessary in production releases. Following example shows how we can remove them.
+
+{{{
+$("#content").bind("onViewerPreInit", function(event)
+{
+    // Get application object
+    var viewer = event.target.repObject;
+
+    // Remove unnecessary tabs
+    viewer.removeTab("About");
+    viewer.removeTab("Schema");
+});
+}}}
+
+
+== Hide Tab Bar ==
+In order to make the viewer easier to use for the end user we might want to hide the entire tab bar (the area where tab labels are displayed) and show only preview of HAR logs.
+
+Following example removes all tabs except of _Preview_ and hides the 
+tab bar.
+
+{{{
+$("#content").bind("onViewerPreInit", function(event)
+{
+    // Get application object
+    var viewer = event.target.repObject;
+
+    // Remove unnecessary tabs
+    viewer.removeTab("Home");
+    viewer.removeTab("DOM");
+    viewer.removeTab("About");
+    viewer.removeTab("Schema");
+
+    // Hide the tab bar
+    viewer.showTabBar(false);
+});
+}}}
