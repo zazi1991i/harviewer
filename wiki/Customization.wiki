@@ -55,6 +55,7 @@ See following example that shows how to register a listener.
         // Get application object
         var viewer = event.target.repObject;
     });
+    </script>
 </body>
 }}}
 
