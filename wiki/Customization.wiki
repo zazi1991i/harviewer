@@ -10,9 +10,9 @@ There is a few cookies that you can use to customize look and feel of HAR Viewer
 
 
 === UI Customization ===
-HAR Viewer also provides APIs that can be used for UI customization. For example, you can remove default tabs and/or toolbar buttons that are not necessary for your needs.
+HAR Viewer also provides APIs that can be used to customize viewer's UI. For example, you can remove default tabs or toolbar buttons that are not necessary for your needs.
 
-The customization can be don within index.php, which represents the application page.
+The customization can be done within index.php. This file represents usually the entry point of the HAR Viewer application.
 
 Here is a simplified version of the file:
 
