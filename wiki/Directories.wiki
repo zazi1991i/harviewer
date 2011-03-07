@@ -3,7 +3,6 @@ This page is intended to describe directory structure of HAR Viewer project. Dev
 == Introduction ==
 
   * build-tools - various tools used for the build process (script minification, tools for generation doc from source code comments, etc.)
-
   * requirejs - RequireJS package + jQuery
   * selenium - HAR Viewer uses selenium for testing.
   * webapp - HAR Viewer implementation
