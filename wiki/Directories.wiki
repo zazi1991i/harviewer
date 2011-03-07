@@ -21,7 +21,7 @@ HAR Viewer is based on RequireJS and script file use asynchronous module definit
   * xhr-spy - Implementation of XHR Spy bookmarklet (in progress)
 
 Third party libraries:
-  * syntax-highlighter
+  * syntax-highlighter - Use for response bodies in cases where the response is: javascript, HTML, CSS, etc.
   * dowloadify - Third party library implementing client side download (based on flash).
   * excanvas - Canvas implementation for IE.
   * jquery-plugins - Plugins for jQuery.
