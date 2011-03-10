@@ -129,6 +129,7 @@ $("#content").bind("onViewerPreInit", function(event)
 
     // Make sure stats and timeline is visible
     // to the user by default
+    var preview = viewer.getTab("Preview");
     preview.showStats(true);
     preview.showTimeline(true);
 });
