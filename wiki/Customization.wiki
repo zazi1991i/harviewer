@@ -166,8 +166,8 @@ $("#content").bind("onViewerPreInit", function(event)
     // to the user by default
     var preview = viewer.getTab("Preview");
 
-   // Add custom page timing displayed as a vertical line
-   // over request in the first phase.
+    // Add custom page timing displayed as a vertical line
+    // over request in the first phase.
     preview.addPageTiming({
         name: "_onMyEvent",
         description: "A custom page timing"
