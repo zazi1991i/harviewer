@@ -135,5 +135,65 @@ $("#content").bind("onViewerPreInit", function(event)
 });
 }}}
 
+== Custom Page Timings ==
+_Available since HAR Viewer 2.0.8, not yet released._
+
+Timings of events related to the page load such as _onLoad_ and _DOMContentLoaded_ events are displayed as vertical lines drawn over network requests. Following example shows how to append new timings coming from HAR custom fields (see _Custom Fields_ in HAR 1.2 spec).
+
+Let's imagine following HAR file snippet (the _page.pageTimings_ object) with one new custom field.
+
+{{{
+"pageTimings": {
+    "onContentLoad": 5605, 
+    "onLoad": 6964,
+    "_onMyEvent": 4000
+}, 
+}}}
+
+_Note that custom fields must start with an underscore_
+
+There is a new field called _onMyEvent_ with a corresponding timing value that says when it happened since the page load beginning.
+
+Now we need to register that field within the viewer as follows:
+
+{{{
+$("#content").bind("onViewerPreInit", function(event)
+{
+    // Get application object
+    var viewer = event.target.repObject;
+
+    // Make sure stats and timeline is visible
+    // to the user by default
+    var preview = viewer.getTab("Preview");
+
+   // Add custom page timing displayed as a vertical line
+   // over request in the first phase.
+    preview.addPageTiming({
+        name: "_onMyEvent",
+        description: "A custom page timing"
+    });
+});
+}}}
+
+The new vertical line presenting our new timing will be green, however we can also specify a CSS class for it.
+
+{{{
+preview.addPageTiming({
+    name: "onPaint",
+    classes: "onPaintBar",
+    description: "MozAfterPaint event fired"
+});
+}}}
+
+And define the class:
+
+{{{
+<style type="text/css">
+.onPaintBar {
+    background-color: gray;
+}
+}}}
+
+
 == Feedback ==
 Do you need more? Please [http://code.google.com/p/harviewer/issues/list create a report].
