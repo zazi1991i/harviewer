@@ -170,26 +170,21 @@ $("#content").bind("onViewerPreInit", function(event)
     // over request in the first phase.
     preview.addPageTiming({
         name: "_onMyEvent",
+        classes: "onMyEventBar",
         description: "A custom page timing"
     });
 });
 }}}
 
-The new vertical line presenting our new timing will be green, however we can also specify a CSS class for it.
+  * {{{name}}} Name of the field in HAR file.
+  * {{{classes}}} Optional CSS class associated with the vertical line. Can be used to e.g. specify a color of the line. The line is green by default.
+  * {{{description}}} Description of the timing/event that is displayed in the tooltip.
 
-{{{
-preview.addPageTiming({
-    name: "onPaint",
-    classes: "onPaintBar",
-    description: "MozAfterPaint event fired"
-});
-}}}
-
-And define the class:
+An example of a custom CSS class that changes the default color:
 
 {{{
 <style type="text/css">
-.onPaintBar {
+.onMyEventBar {
     background-color: gray;
 }
 </style>
