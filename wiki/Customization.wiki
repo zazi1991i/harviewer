@@ -192,6 +192,7 @@ And define the class:
 .onPaintBar {
     background-color: gray;
 }
+</style>
 }}}
 
 
