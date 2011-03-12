@@ -162,12 +162,9 @@ $("#content").bind("onViewerPreInit", function(event)
     // Get application object
     var viewer = event.target.repObject;
 
-    // Make sure stats and timeline is visible
-    // to the user by default
-    var preview = viewer.getTab("Preview");
-
     // Add custom page timing displayed as a vertical line
     // over request in the first phase.
+    var preview = viewer.getTab("Preview");
     preview.addPageTiming({
         name: "_onMyEvent",
         classes: "onMyEventBar",
