@@ -25,7 +25,7 @@ Following steps describe how to build your own distribution of HAR Viewer.
 
 === Customize Build ===
 
-As explained in the section above, the build process is based on {{{ant}}}. This process utilizes a {{{ant.properties}}} file that can be used to customize following:
+As explained in the section above, the build process is based on {{{ant}}}. This process utilizes a {{{ant.properties}}} file that can be used to customize:
 
   * {{{VERSION}}} Version number of the viewer.
   * {{{GOOGLE-ANALYTICS-PROFILE}}} ID of google analytics profile. If set, google analytics will apply automatically using provided ID (not set by default). This property is available since HAR Viewer 1.1-9
