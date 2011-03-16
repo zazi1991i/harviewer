@@ -5,7 +5,7 @@ There is a few cookies that you can use to customize look and feel of HAR Viewer
 
   * *timeline* (_boolean_) - Use this cookie to show/hide a timeline section displayed on the Preview tab. Set to true by default.
   * *stats* (_boolean_) - Use this cookie to show/hide a statistics section displayed on the Preview tab. Set to true by default.
-  * *phaseInterval* (_number, ms_) - Number of milliseconds (1000 by default) specifying a maximum gap between two requests. If a time lag between two HTTP requests (counted from the end of the first one till the beginning of the second one) exceeds the limit, the graphical timeline breaks layout and requests are drawn again from the beginning (left side) of the waterfall   diagram. See [http://www.softwareishard.com/blog/firebug/firebug-net-panel-timings/ more] about this feature.
+  * *phaseInterval* (_number, ms_) - Number of milliseconds (1000 by default) specifying a maximum gap between two requests. If a time lag between two HTTP requests (counted from the end of the first till the beginning of the second) exceeds the limit, the graphical timeline breaks layout and requests are drawn again from the beginning (left side) of the waterfall diagram. Disable this feature by setting to zero (or less). See [http://www.softwareishard.com/blog/firebug/firebug-net-panel-timings/ more] about this feature.
   * *validate* (_boolean_) If set to true, viewer is automatically validating input HAR logs against JSON schema.
 
 
