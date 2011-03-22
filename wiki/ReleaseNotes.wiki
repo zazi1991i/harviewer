@@ -1,0 +1,8 @@
+Use this page to learn about changes in HAR Viewer releases. For summary of all changes see also [http://code.google.com/p/harviewer/source/browse/trunk/webapp/ReleaseNotes.txt Release Notes] within the distribution.
+
+== HAR Viewer 2.0.9 ==
+(in progress)
+
+* Update to RequireJS 0.24.0. This update required changes in index.php file. In case you are customizing your distribution using different index.php file, check [http://code.google.com/p/harviewer/wiki/API API]. All examples are up to date. RequireJS is not bundled together with jQuery.js anymore and you need to explicitly include both these files.
+
+
