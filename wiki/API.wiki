@@ -13,8 +13,8 @@ Here is a simplified version of the file:
 </head>
 <body class="harBody">
     <div id="content" version="@VERSION@"></div>
-    <script src="scripts/requireplugins-jquery.js"></script>
-    <script>require(["harViewer"]);</script>
+    <script src="scripts/jquery.js"></script>
+    <script data-main="scripts/harViewer" src="scripts/require.js"></script>
     <link rel="stylesheet" href="css/harViewer.css" type="text/css"/>
 </body>
 </html>
@@ -37,8 +37,8 @@ See following example that shows how to register a listener.
 {{{
 <body class="harBody">
     <div id="content" version="@VERSION@"></div>
-    <script src="scripts/requireplugins-jquery.js"></script>
-    <script>require(["harViewer"]);</script>
+    <script src="scripts/jquery.js"></script>
+    <script data-main="scripts/harViewer" src="scripts/require.js"></script>
     <script>
     $("#content").bind("onViewerPreInit", function(event)
     {
