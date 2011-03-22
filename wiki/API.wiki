@@ -1,4 +1,5 @@
 #labels Featured
+== Extension API ==
 HAR Viewer provides APIs that can be used to customize viewer's UI. For example, you can remove default application tabs or toolbar buttons that are not necessary for your needs.
 
 The customization can be done within index.php. This file represents the entry point of the HAR Viewer application.
@@ -21,7 +22,8 @@ Here is a simplified version of the file:
 }}}
 
   * {{{<div id="content">}}} element contains entire HAR Viewer UI
-  * {{{scripts/requireplugins-jquery.js}}} includes RequireJS + JQuery. HAR Viewer is built on top of these libraries.
+  * {{{scripts/jquery.js}}} includes JQuery.
+  * {{{scripts/require.js}}} includes RequireJS. The _scripts/harViewer_ module is automatically loaded.
   * {{{require(["harViewer"]);}}} loads entire HAR Viewer module and all dependent modules.
   * {{{VERSION@}}} is dynamically replaced by the current version number during the [http://code.google.com/p/harviewer/wiki/Installation build] process.
 
