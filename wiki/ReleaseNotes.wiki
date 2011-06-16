@@ -1,5 +1,10 @@
 Use this page to learn about changes in HAR Viewer releases. For complete summary of all changes see also [http://code.google.com/p/harviewer/source/browse/trunk/webapp/ReleaseNotes.txt Release Notes] within the distribution.
 
+== HAR Viewer 2.0.11 ==
+  * Support for console.timeStamp() introduced in Firebug 1.8b3
+  * Better information in time info tip (for the waterfall timeline)
+  * Visual separator between two requests groups.
+
 == HAR Viewer 2.0.10 ==
   * Replace '$' by 'jQuery' so, the code works even in jQuery safe mode.
   * If 'expand=true' is specified in the URL all page lists are expanded by default.
