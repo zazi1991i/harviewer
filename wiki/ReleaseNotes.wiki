@@ -4,6 +4,7 @@ Use this page to learn about changes in HAR Viewer releases. For complete summar
   * Support for console.timeStamp() introduced in Firebug 1.8b3
   * Better information in time info tip (for the waterfall timeline)
   * Visual separator between two requests groups.
+  * Home tab provides a short note about loading HARs through JSONP.
 
 == HAR Viewer 2.0.10 ==
   * Replace '$' by 'jQuery' so, the code works even in jQuery safe mode.
