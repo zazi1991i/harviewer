@@ -126,7 +126,7 @@ $("#content").bind("onViewerPreInit", function(event)
 }}}
 
 == Custom Page Timings ==
-_Available since HAR Viewer 2.0.8, not yet released._
+_Available since HAR Viewer 2.0.8_
 
 Timings of events related to the page load such as _onLoad_ and _DOMContentLoaded_ events are displayed as vertical lines drawn over network requests. Following example shows how to append new timings coming from HAR custom fields (see _Custom Fields_ in HAR 1.2 spec).
 
@@ -175,6 +175,53 @@ An example of a custom CSS class that changes the default color:
     background-color: gray;
 }
 </style>
+}}}
+
+== Loading HAR Files ==
+_Available since HAR Viewer 2.0.12_
+
+Apart from specifying a HAR file in the URL, you can also load it manually using {{{loadHar}}} method.
+
+Next example shows how to load HAR file from the same domain.
+
+{{{
+$("#content").bind("onViewerInit", function(event)
+{
+    var viewer = event.target.repObject;
+    viewer.loadHar(<path-to-har-file>);
+});
+}}}
+
+In case you want to load HARs from different domain you need to use HARP (JSONP) syntax. See another example:
+
+{{{
+$("#content").bind("onViewerInit", function(event)
+{
+    var viewer = event.target.repObject;
+    var settings = {jsonp: true};
+    viewer.loadHar(<path-to-har-file>, settings);
+});
+}}}
+
+If you already have the HAR log object loaded and parsed, you can directly append it using {{{appendPreview}}} method.
+
+{{{
+$("#content").bind("onViewerInit", function(event)
+{
+    var viewer = event.target.repObject;
+    var log = <har-file-loaded-and-parsed>;
+    viewer.appendPreview(log);
+});
+}}}
+
+The same works also for the {{{preview.php}}}. In such case you need to handle {{{onPreviewInit}}} event.
+
+{{{
+$("#content").bind("onPreviewInit", function(event)
+{
+    var viewer = event.target.repObject;
+    viewer.loadHar(<path-to-har-file>);
+});
 }}}
 
 
