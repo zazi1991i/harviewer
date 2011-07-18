@@ -77,3 +77,9 @@ _Load HAR file from an external domain and expand its content:_
 {{{
 <div class="har" data-har="http://example.com/my.harp" expand="true"></div>
 }}}
+
+_Set custom height of the generated preview:_
+
+{{{
+<div class="har" data-har="http://example.com/my.harp" height="250px"></div>
+}}}
