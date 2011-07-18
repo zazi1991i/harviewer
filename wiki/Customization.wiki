@@ -11,3 +11,63 @@ There is a few cookies that you can use to customize look and feel of HAR Viewer
 
 === UI Customization ===
 HAR Viewer also provides APIs that can be used to customize viewer's UI. Check [http://code.google.com/p/harviewer/wiki/API API] page for documentation and examples.
+
+
+=== HAR Preview Embedding ===
+HAR Viewer also allows creating simplified previews that can be easily inserted in other pages.
+
+Here is an example of a simple preview:
+[http://www.softwareishard.com/har/viewer/preview.php?inputUrl=http://www.janodvarko.cz/har/viewer/examples/inline-scripts-block.harp&expand=true]
+
+In order to insert the preview in a page, you can either create an iframe pointing to the right URL or utilize a script that generates the iframe code for you. The script is part of HAR Viewer distribution package as _har.js_.
+
+The following example shows how to asynchronously load _har.js_ script:
+{{{
+<script>
+(function() {
+    var har = document.createElement("script");
+    har.src = "/har/viewer/har.js";
+    har.setAttribute("id", "har");
+    har.setAttribute("async", "true");
+    document.documentElement.firstChild.appendChild(har);
+})();
+</script>
+}}}
+
+The synchronous way:
+
+{{{
+<script src="/har/viewer/har.js">
+}}}
+
+Consequently you can insert following markup into the page:
+
+{{{
+<div class="har" data-har="http://www.janodvarko.cz/har/viewer/examples/inline-scripts-block.harp"></div>
+}}}
+
+Every element with class _har_ is processed an appropriate iframe preview inserted into it.
+
+Here is a list of attributes you can set on such element:
+
+  * {{{class}}} (mandatory) elements with this class are considered as HAR preview elements. The class is removed as soon as the element is processed. Possible additional classes are not touched.
+
+  * {{{data-har}}} (mandatory) source URL for target file. The URL must start with 'http:' in case where the target file is located on a different domain. The file must use HARP syntax (JSONP) in these cases. Otherwise the URL is considered to be from the same domain and path relative to the current location. The file must use HAR syntax (JSON) in such case.
+
+  * {{{width}}} (optional, default: '100%') width of the preview.
+
+  * {{{height}}} (optional, default: '150px') height of the preview.
+
+  * {{{expand}}} (optional, default: 'true') true if individual pages should be expanded.
+
+Further examples:
+
+_Load HARP file from an external domain using JSONP._
+  * {{{<div class="har" data-har="http://example.como/my.harp"></div>}}}
+
+_Load HAR file from the same domain._
+  * {{{<div class="har" data-har="/example.como/my.harp"></div>}}}
+
+_Load HAR file from an external domain and expads all pages._
+
+  * {{{<div class="har" data-har="http://example.como/my.harp"></div>}}}
