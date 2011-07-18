@@ -26,7 +26,7 @@ The following example shows how to asynchronously load _har.js_ script:
 <script>
 (function() {
     var har = document.createElement("script");
-    har.src = "/har/viewer/har.js";
+    har.src = "http://www.softwareishard.com/har/viewer/har.js";
     har.setAttribute("id", "har");
     har.setAttribute("async", "true");
     document.documentElement.firstChild.appendChild(har);
@@ -37,7 +37,7 @@ The following example shows how to asynchronously load _har.js_ script:
 The synchronous way:
 
 {{{
-<script src="/har/viewer/har.js">
+<script src="http://www.softwareishard.com/har/viewer/har.js">
 }}}
 
 Consequently you can insert following markup into the page:
@@ -62,12 +62,18 @@ Here is a list of attributes you can set on such element:
 
 Further examples:
 
-_Load HARP file from an external domain using JSONP._
-  * {{{<div class="har" data-har="http://example.como/my.harp"></div>}}}
+_Load HARP file from an external domain using JSONP:_
+{{{
+<div class="har" data-har="http://example.com/my.harp"></div>
+}}}
 
-_Load HAR file from the same domain._
-  * {{{<div class="har" data-har="/example.como/my.harp"></div>}}}
+_Load HAR file from the same domain:_
+{{{
+<div class="har" data-har="my.har"></div>
+}}}
 
-_Load HAR file from an external domain and expads all pages._
+_Load HAR file from an external domain and expand its content:_
 
-  * {{{<div class="har" data-har="http://example.como/my.harp"></div>}}}
+{{{
+<div class="har" data-har="http://example.com/my.harp" expand="true"></div>
+}}}
