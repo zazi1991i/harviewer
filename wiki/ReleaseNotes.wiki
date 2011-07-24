@@ -1,5 +1,8 @@
 Use this page to learn about changes in HAR Viewer releases. For complete summary of all changes see also [http://code.google.com/p/harviewer/source/browse/trunk/webapp/ReleaseNotes.txt Release Notes] within the distribution.
 
+== HAR Viewer 2.0.13 ==
+  * Support for embedding of HAR preview in a web page, see [http://code.google.com/p/harviewer/wiki/Customization#HAR_Preview_Embedding HAR Preview Embedding].
+
 == HAR Viewer 2.0.12 ==
   * New API for loading HAR files, see [http://code.google.com/p/harviewer/wiki/API#Loading_HAR_Files Loading HAR Files] docs.
 
