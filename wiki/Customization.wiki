@@ -34,6 +34,8 @@ The following example shows how to asynchronously load _har.js_ script:
 </script>
 }}}
 
+Notice the *id* attribute. The attribute is used by _har.js_ script in order to find out where the HAR Viewer (and so HAR preview) should be loaded from.
+
 The synchronous way:
 
 {{{
