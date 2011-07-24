@@ -37,7 +37,7 @@ The following example shows how to asynchronously load _har.js_ script:
 The synchronous way:
 
 {{{
-<script src="http://www.softwareishard.com/har/viewer/har.js">
+<script id="har" src="http://www.softwareishard.com/har/viewer/har.js">
 }}}
 
 Consequently you can insert following markup into the page:
