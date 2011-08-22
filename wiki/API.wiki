@@ -50,6 +50,25 @@ See following example that shows how to register a listener.
 </body>
 }}}
 
+== Application Object ==
+Most of the APIs described below require access to the main application object _HARView_ (defined in [http://code.google.com/p/harviewer/source/browse/trunk/webapp/scripts/harViewer.js harViewer.js]). There are two ways how to get reference to the object.
+
+Handle an existing event and use passed _event_ object.
+
+{{{
+$("#content").bind("onViewerPreInit", function(event)
+{
+    // Get application object
+    var viewer = event.target.repObject;
+});
+}}}
+
+Find the main application element (the container for entire HAR Viewer UI) and use its _repObject_ property. This approach is suitable in cases when handling events is not the right time and you need to use the application object at any time later.
+
+{{{
+var viewer = document.getElementById("content").repObject;
+}}}
+
 
 == Removing Unnecessary Tabs ==
 Some of the application's tabs (such as _Home_, About, etc.) are not always necessary in production releases. Following example shows how we can remove them.
