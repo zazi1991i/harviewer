@@ -96,7 +96,7 @@ Simple HAR previews can be also inserted into your pages via [http://wordpress.o
 Following parameters are available:
 
   * {{{path}}} (mandatory) This is the only mandatory parameter that specifies path to the HAR file.
-  * {{{height}}} (optional) Height of the preview.
+  * {{{height}}} (optional, default 220px) Height of the preview.
   * {{{resizer}}} (optional, default: true) True if vertical resizer should be displayed a the bottom of the preview.
   * {{{expand}}} (optional, default: false) True if content should be expanded by default.
   * {{{loader}}} (optional, default: false) True if the HAR content shouldn't be loaded automatically, but wait till user explicitly loads it.
