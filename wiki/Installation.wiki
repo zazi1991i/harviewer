@@ -1,9 +1,9 @@
 #labels Featured,Phase-Deploy
-Download latest distribution from [http://code.google.com/p/harviewer/downloads/list Downloads] section, unzip and copy on your PHP enabled web server.
+== Distribution Package ==
+The easiest way to install HAR Viewer is downloading the latest distribution from [http://code.google.com/p/harviewer/downloads/list Downloads] section, unzip and copy on your PHP enabled web server.
 
-=== Introduction ===
-
-HAR Viewer is a web application (PHP) that allows to visualize HTTP tracing logs based on HTTP Archive format (HAR). These files contain recorded information about HTTP traffic performed by web pages. A HAR log can be created by [http://www.softwareishard.com/blog/har-adopters/ HTTP tracking tools] such as Firebug.
+== Resources ==
+HAR Viewer is a web application that allows to visualize HTTP tracing logs based on HTTP Archive format (HAR). These files contain recorded information about HTTP traffic performed by web pages. A HAR log can be created by [http://www.softwareishard.com/blog/har-adopters/ HTTP tracking tools] such as Firebug.
 
   * See [http://www.softwareishard.com/blog/har-12-spec/ HAR spec] to understand structure of HAR file.
   * See [http://www.softwareishard.com/blog/har-adopters/ List of tools] supporting HAR.
@@ -11,8 +11,7 @@ HAR Viewer is a web application (PHP) that allows to visualize HTTP tracing logs
   * Use [http://www.softwareishard.com/blog/netexport/ Firebug/NetExport] to monitor HTTP traffic and save collected info into a HAR file.
   * Use HAR [http://groups.google.com/group/http-archive-specification?hl=en newsgroup] to discuss HAR spec.
 
-=== Build ===
-
+== Build ==
 Following steps describe how to build your own distribution of HAR Viewer.
 
   * Checkout HAR Viewer source code from SVN (read only copy)
@@ -23,23 +22,22 @@ Following steps describe how to build your own distribution of HAR Viewer.
 
   * New *Release* directory is created. Copy content of this directory on to your PHP enabled web server.
 
-=== Customize Build ===
+== Customize Build ==
 
 As explained in the section above, the build process is based on {{{ant}}}. This process utilizes a {{{ant.properties}}} file that can be used to customize:
 
   * {{{VERSION}}} Version number of the viewer.
   * {{{GOOGLE-ANALYTICS-PROFILE}}} ID of google analytics profile. If set, google analytics will apply automatically using provided ID (not set by default). This property is available since HAR Viewer 1.1-9
 
-=== Pages ===
-
-The viewer provides two pages that can be used to preview a HAR file.
+== PHP ==
+The viewer provides two default PHP files that can be used to preview a HAR file. See [http://code.google.com/p/harviewer/wiki/API API] for more nformation how to further customize these files.
 
   * {{{index.php}}} The main HAR Viewer page that shows detailed information summary about loaded HAR file(s).
 
   * {{{pagelist.php}}} Simplified preview of a single HAR file. Can be used as embedded iframe withing another page (e.g. blog post). This page expects one parameter {{{path}}} that specifies location of the input HAR file.
 
-Online examples:
 
+Online examples:
 
 [http://www.softwareishard.com/har/viewer/index.php HAR Viewer]:
 {{{http://www.softwareishard.com/har/viewer/index.php}}}
@@ -51,7 +49,7 @@ Online examples:
 {{{http://www.softwareishard.com/har/viewer/pagelist.php?path=examples/google.com.har}}}
 
 
-=== Known Issues ===
+== Known Issues ==
    * On CentOS you need to install the Apache Ant version 1.6.5 and then the optional Ant trax package to successfully build harviewer.
 
 {{{
