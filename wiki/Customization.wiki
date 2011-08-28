@@ -1,6 +1,6 @@
 Download latest distribution from [http://code.google.com/p/harviewer/downloads/list Downloads] section, unzip and copy on your PHP enabled web server.
 
-=== Cookies ===
+== Cookies ==
 There is a few cookies that you can use to customize look and feel of HAR Viewer. See following list:
 
   * *timeline* (_boolean_) - Use this cookie to show/hide a timeline section displayed on the Preview tab. Set to true by default.
@@ -9,11 +9,11 @@ There is a few cookies that you can use to customize look and feel of HAR Viewer
   * *validate* (_boolean_) If set to true, viewer is automatically validating input HAR logs against JSON schema.
 
 
-=== UI Customization ===
+== UI Customization ==
 HAR Viewer also provides APIs that can be used to customize viewer's UI. Check [http://code.google.com/p/harviewer/wiki/API API] page for documentation and examples.
 
 
-=== HAR Preview Embedding ===
+== HAR Preview Embedding ==
 HAR Viewer also allows creating simplified previews that can be easily inserted in other pages.
 
 Here is an example of a simple preview:
@@ -85,3 +85,7 @@ _Set custom height of the generated preview:_
 {{{
 <div class="har" data-har="http://example.com/my.harp" height="250px"></div>
 }}}
+
+== Wordpress Plugin ==
+
+TODO
