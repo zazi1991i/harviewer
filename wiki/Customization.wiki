@@ -95,11 +95,11 @@ Simple HAR previews can be also inserted into your pages via WordPress plugin. A
 
 Following parameters are available:
 
-  * {{{path}}} This is the only mandatory parameter that specifies path to the HAR file.
-  * {{{height}}} [px] Height of the preview.
-  * {{{resizer}}} [boolean] True if vertical resizer should be displayed a the bottom of the preview (true by default)
-  * {{{expand}}} [boolean] True if content should be expanded by default (false by default).
-  * {{{loader}}} [boolean] True if the HAR content shouldn't be loaded automatically, but wait till user explicitly loads it (false by default).
+  * {{{path}}} (mandatory) This is the only mandatory parameter that specifies path to the HAR file.
+  * {{{height}}} (optional) Height of the preview.
+  * {{{resizer}}} (optional, default: true) True if vertical resizer should be displayed a the bottom of the preview.
+  * {{{expand}}} (optional, default: false) True if content should be expanded by default.
+  * {{{loader}}} (optional, default: false) True if the HAR content shouldn't be loaded automatically, but wait till user explicitly loads it.
 
 See an example of such embedded preview in [http://www.softwareishard.com/blog/firebug/firebug-1-8-console-timestamp/ this] blog post.
 
