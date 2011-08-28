@@ -86,7 +86,7 @@ _Set custom height of the generated preview:_
 <div class="har" data-har="http://example.com/my.harp" height="250px"></div>
 }}}
 
-== WordPress ==
+== Word Press Plugin ==
 Simple HAR previews can be also inserted into your pages via WordPress plugin. As soon as you have the plugin installed, type following into your blog post:
 
 {{{
