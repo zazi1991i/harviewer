@@ -86,6 +86,21 @@ _Set custom height of the generated preview:_
 <div class="har" data-har="http://example.com/my.harp" height="250px"></div>
 }}}
 
-== Wordpress Plugin ==
+== WordPress Plugin ==
+Simple HAR previews can be also inserted into your pages via WordPress plugin. As soon as you have the plugin installed, type following into your blog post:
 
-TODO
+{{{
+[har path="/path/to/your/har/file/example.har" height="100px"]
+}}}
+
+Following parameters are available:
+
+  * {{{path}}} This is the only mandatory parameter that specifies path to the HAR file.
+  * {{{height}}} [px] Height of the preview.
+  * {{{resizer}}} [boolean] True if vertical resizer should be displayed a the bottom of the preview (true by default)
+  * {{{expand}}} [boolean] True if content should be expanded by default (false by default).
+  * {{{loader}}} [boolean] True if the HAR content shouldn't be loaded automatically, but wait till user explicitly loads it (false by default).
+
+See an example of such embedded preview in [http://www.softwareishard.com/blog/firebug/firebug-1-8-console-timestamp/ this] blog post.
+
+TODO: plugin distribution link
