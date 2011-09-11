@@ -3,6 +3,7 @@ Use this page to learn about changes in HAR Viewer releases. For complete summar
 == HAR Viewer 2.0.14 ==
   * Column customization in the Preview tab.
   * Support for search within HAR log in the DOM tab. 
+  * New [http://code.google.com/p/harviewer/wiki/Customization?ts=1315753789&updated=Customization cookies]
 
 == HAR Viewer 2.0.13 ==
   * Support for embedding of HAR preview in a web page, see [http://code.google.com/p/harviewer/wiki/Customization#HAR_Preview_Embedding HAR Preview Embedding].
