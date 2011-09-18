@@ -1,5 +1,9 @@
 Use this page to learn about changes in HAR Viewer releases. For complete summary of all changes see also [http://code.google.com/p/harviewer/source/browse/trunk/webapp/ReleaseNotes.txt Release Notes] within the distribution.
 
+== HAR Viewer 2.0.15 (in-progress) ==
+  * API for [http://code.google.com/p/harviewer/wiki/API#Request_Column_Customization column customization] in the Preview tab.
+  * Cookies: _hiddenCols_ replaced by _previewCols_
+
 == HAR Viewer 2.0.14 ==
   * Column customization in the Preview tab.
   * Support for search within HAR log in the DOM tab. 
