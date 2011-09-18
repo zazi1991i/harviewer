@@ -243,6 +243,24 @@ $("#content").bind("onPreviewInit", function(event)
 });
 }}}
 
+== Request Columns Customization ==
+_Available since HAR Viewer 2.0.15_
+
+List of visible columns used in HAR timeline waterfall graph can be customized through a cookie: _previewCols_ or through API.
+
+{{{
+$("#content").bind("onViewerInit", function(event)
+{
+    var viewer = event.target.repObject;
+
+    // Display URL, Status, Size and Timeline columns by default
+    // Do not touch cookies (the second parameter is true)
+    viewer.setPreviewColumns("url status size timeline", true);
+});
+}}}
+
+The first argument specifies list of column IDs separated by a space (see [http://code.google.com/p/harviewer/source/browse/trunk/webapp/scripts/preview/requestList.js#51 available columns]). The second argument says whether touching cookies should be avoided.
+
 
 == Feedback ==
 Do you need more? Please [http://code.google.com/p/harviewer/issues/list create a report].
