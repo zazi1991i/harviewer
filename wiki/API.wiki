@@ -243,7 +243,7 @@ $("#content").bind("onPreviewInit", function(event)
 });
 }}}
 
-== Request Columns Customization ==
+== Request Column Customization ==
 _Available since HAR Viewer 2.0.15_
 
 List of visible columns used in HAR timeline waterfall graph can be customized through a cookie: _previewCols_ or through API.
