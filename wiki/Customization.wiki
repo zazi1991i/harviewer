@@ -8,7 +8,7 @@ There is a few cookies that you can use to customize look and feel of HAR Viewer
   * *phaseInterval* (_number, ms_) - Number of milliseconds (1000 by default) specifying a maximum gap between two requests. If a time lag between two HTTP requests (counted from the end of the first till the beginning of the second) exceeds the limit, the graphical timeline breaks layout and requests are drawn again from the beginning (left side) of the waterfall diagram. Disable this feature by setting to zero (or less). See [http://www.softwareishard.com/blog/firebug/firebug-net-panel-timings/ more] about this feature.
   * *validate* (_boolean_) If set to true, viewer is automatically validating input HAR logs against JSON schema.
 
-  * *hiddenCols* (_string_) List of columns (used in the Preview tab) that should be initially hidden. Individual column names are separated by a space (e.g. _domain size type_)
+  * *previewCols* (_string_) List of columns (used in the Preview tab) that should be initially displayed. Individual column names are separated by a space (e.g. _domain size type_)
 
   * *searchCaseSensitive* (_boolean_) Set to true if you want to use case sensitive search within HAR log (DOM tab)
 
