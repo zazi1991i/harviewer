@@ -14,8 +14,8 @@ HAR Viewer is a web application that allows to visualize HTTP tracing logs based
 == Build ==
 Following steps describe how to build your own distribution of HAR Viewer.
 
-  * Checkout HAR Viewer source code from SVN (read only copy)
-  {{{svn checkout http://harviewer.googlecode.com/svn/trunk/ harviewer}}}
+  * Checkout HAR Viewer source code from GIT
+  {{{git clone git@github.com:janodvarko/harviewer.git}}}
 
   * Build distribution by running [http://ant.apache.org/ ant] in the root directory
   {{{ant}}}
