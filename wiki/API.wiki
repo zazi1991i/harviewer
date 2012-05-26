@@ -10,10 +10,11 @@ Here is a simplified version of the file:
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>HTTP Archive Viewer @VERSION@</title>
+    <title>HAR Viewer Test</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body class="harBody">
-    <div id="content" version="@VERSION@"></div>
+    <div id="content" version="test"></div>
     <script src="scripts/jquery.js"></script>
     <script data-main="scripts/harViewer" src="scripts/require.js"></script>
     <link rel="stylesheet" href="css/harViewer.css" type="text/css"/>
